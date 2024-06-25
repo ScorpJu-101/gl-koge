@@ -1,0 +1,76 @@
+body {
+  background: #161616;
+  margin: 0;
+  height: 100dvh;
+  display: grid;
+  place-content: center center;
+}
+
+.spinner {
+  background: #f5dad8;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  aspect-ratio: 1;
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+  animation: rotate 6s linear infinite;
+}
+
+.spinner img {
+  display: block;
+  width: 100%;
+  opacity: 0;
+  animation: bounce 0.2s linear infinite alternate,fadeInImage 6.5s ease-in-out 3s forwards;
+}
+
+.spinner.fadeIn {
+  opacity: 1; /* Make the spinner visible */
+  animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-5%);
+  }
+  to {
+    transform: translateY(10%);
+  }
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #161616;
+  background: #f5dad8;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+button:hover {
+  background: #e0bcbc;
+}

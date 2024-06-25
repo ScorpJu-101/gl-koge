@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>good luck from spin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="spinner">
+    <img src="pedro.png" alt="Pedro!">
+  </div>
+  <button id="playButton">CLICK</button>
+  <audio id="audio" autoplay loop>
+    <source src="pedro.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  
+  <script>
+    document.getElementById('playButton').addEventListener('click', function() {
+      document.getElementById('audio').play();
+      document.querySelector('.spinner').classList.add('fadeIn');
+      document.querySelector('.spinner img').classList.add('fadeIn');
+    });
+  
+  </script>
+</body>
+</html>
